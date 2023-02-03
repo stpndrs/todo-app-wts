@@ -30,21 +30,21 @@ header {
   text-align: center;
 }
 
-.search-group {
+#add-group {
   display: grid;
   grid-template-columns: 4fr 1fr;
   height: 50px;
   border: 2px solid var(--primary);
 }
 
-#search-input {
+#add-input {
   all: unset;
   padding: 0 1rem;
   background-color: white;
   color: var(--primary);
 }
 
-#search {
+#add {
   all: unset;
   background-color: var(--primary);
   color: var(--secondary);
@@ -53,12 +53,12 @@ header {
   font-weight: bold;
 }
 
-#search:hover {
+#add:hover {
   background-color: var(--primary-alt);
   cursor: pointer;
 }
 
-#search:active {
+#add:active {
   background-color: var(--primary-alt-2);
 }
 
@@ -91,6 +91,7 @@ header {
   height: 50px;
   background-color: var(--primary);
   color: var(--secondary);
+  border: 2px solid var(--primary);
 }
 
 .task:hover {
@@ -98,12 +99,16 @@ header {
   cursor: pointer;
 }
 
+.task > * {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
 .task__title {
   flex-grow: 1;
   cursor: pointer;
-  display: grid;
-  place-items: center;
-  height: 100%;
+  
   user-select: none;
 }
 
@@ -132,6 +137,16 @@ header {
 
 .task__check:checked::before {
   transform: scale(1);
+}
+
+.task__delete {
+  color: var(--primary);
+  background-color: var(--secondary);
+  padding: 0 .5rem;
+}
+
+.task__delete:hover {
+  background-color: white;
 }
 
 .separator {

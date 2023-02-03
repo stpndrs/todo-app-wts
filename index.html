@@ -18,10 +18,10 @@
         <h1>To-do List</h1>
       </header>
       <main>
-        <div class="search-group">
-          <input type="text" name="input" id="search-input">
-          <button id="search">Add</button>
-        </div>
+        <form id="add-group">
+          <input type="text" name="input" id="add-input">
+          <button id="add">Add</button>
+        </form>
         <div class="aggregate-group">
           <div>
             <b>Ongoing</b>
@@ -41,10 +41,12 @@
           <div class="task">
             <input type="checkbox" class="task__check" id="task-1__check">
             <label class="task__title" for="task-1__check">Ngoding sambil kayang</label>
+            <div class="task__delete">Delete</div>
           </div>
           <div class="task">
             <input type="checkbox" class="task__check" id="task-2__check">
             <label class="task__title" for="task-2__check">Ngoding sambil kayang tapi ngodingnya pake bahasa Pascal</label>
+            <div class="task__delete">Delete</div>
           </div>
         </div>
       </main>
